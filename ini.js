@@ -32,8 +32,7 @@ function tokensToString(tokens) {
    for(var i in tokens) {
      var t = tokens[i];
      var s = JSON.stringify(t, undefined, 2);
-     s = _.template(temp, {token: t, matching: s});   //_  se usa para hacer referencia a un metodo de la libreria underscore(template interpola lo que haya entre % en la cadena temp)
-							//ttoken:--> Lo que hay que decir en el template,  t--> la cadena por la que se reemplaza
+     s = _.template(temp, {token: t, matching: s});	
      r += s;
    }
    return '<ol>\n'+r+'</ol>';
